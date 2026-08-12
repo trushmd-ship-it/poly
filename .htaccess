@@ -1,0 +1,67 @@
+# ═══ MEBELCOM — .htaccess ═══
+
+# Кодировка
+AddDefaultCharset UTF-8
+
+# Убрать index.html из URL
+DirectoryIndex index.html
+
+# ═══ 301-РЕДИРЕКТЫ СО СТАРЫХ URL ═══
+RewriteEngine On
+
+# Старые URL (псевдокириллица) → новые
+Redirect 301 /noptfoluo/                    /portfolio/
+Redirect 301 /cotpydhu4ectbo/               /sotrudnichestvo/
+Redirect 301 /matepualu-na-vubor/           /materialy/
+Redirect 301 /kohtaktu/                     /kontakty/
+Redirect 301 /dizaunproekt/                 /dizain-proekt/
+Redirect 301 /4astue-voprosbi/              /faq/
+Redirect 301 /o-hac/                        /o-kompanii/
+Redirect 301 /cboe-npou3odctbo/             /proizvodstvo/
+Redirect 301 /akcii/                        /portfolio/
+Redirect 301 /shop-exhibition-shop/         /portfolio/
+Redirect 301 /kalkul9top-kyxhu/             /kalkulyatory/
+Redirect 301 /kalkul9top-llikafa/           /kalkulyatory/
+Redirect 301 /konstpyktop_mebelu_dl9_doma/  /kalkulyatory/
+Redirect 301 /yclovi9-doctadku/             /dostavka-oplata/
+Redirect 301 /onlata-pay/                   /dostavka-oplata/
+Redirect 301 /nasha-mebel/                  /
+Redirect 301 /rufix_pemoht_telefohov/       /
+Redirect 301 /privacy-policy/               /politika/
+
+# Старые товарные URL → направления
+Redirect 301 /product/kyxn9-akpul-mdf/                    /kuhni/
+Redirect 301 /product/kyxn9-mdf-v-plenke/                 /kuhni/
+Redirect 301 /product/kyxn9-mdf-v-plastuke/               /kuhni/
+Redirect 301 /product/kyxn9-ldsp/                         /kuhni/
+Redirect 301 /product/llikaf-kype/                        /shkafy/
+Redirect 301 /product/llikaf-raspecalilihuj/              /shkafy/
+Redirect 301 /product/garderobnaya/                       /garderobnye/
+Redirect 301 /product/prixozhaya/                         /prihozhie/
+Redirect 301 /product/gostinaya/                          /gostinye/
+Redirect 301 /product/detskaya/                           /portfolio/
+Redirect 301 /product/ofisnaya-mebel/                     /biznes/
+Redirect 301 /product/komod/                              /portfolio/
+Redirect 301 /product-category/kitchen/                   /kuhni/
+
+# ═══ СЖАТИЕ ═══
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ═══ КЕШИРОВАНИЕ ═══
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+  ExpiresByType image/webp               "access plus 1 year"
+  ExpiresByType image/jpeg               "access plus 1 year"
+  ExpiresByType image/png                "access plus 1 year"
+  ExpiresByType image/svg+xml            "access plus 1 year"
+  ExpiresByType text/html                "access plus 10 minutes"
+</IfModule>
+
+# ═══ БЕЗОПАСНОСТЬ ═══
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"

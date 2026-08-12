@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прототип — Планировка квартиры</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap');
+
+  :root {
+    --brass: #C08A3C;
+    --brass-lt: #E3C288;
+    --bone: #EFEBE2;
+    --forest-800: #153029;
+    --forest-900: #0D231D;
+    --stone: #6A7873;
+    --ink: #111C18;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--forest-900);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 60px;
+  }
+
+  .section-head { text-align: center; margin-bottom: 40px; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.13em;
+    text-transform: uppercase; color: var(--brass);
+    margin-bottom: 12px; display: block;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400; color: var(--bone); line-height: 1.2;
+  }
+  .subtitle { font-size: 17px; color: var(--stone); margin-top: 12px; }
+
+  .floor-wrap {
+    width: 100%; max-width: 960px;
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.4);
+  }
+
+  .wall { fill: none; stroke: var(--bone); stroke-width: 3; opacity: 0.25; }
+  .wall-inner { fill: none; stroke: var(--bone); stroke-width: 2; opacity: 0.15; }
+  .room-bg { fill: rgba(21, 48, 41, 0.5); }
+  .room-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 0.12em;
+    text-transform: uppercase; fill: var(--stone);
+    text-anchor: middle; opacity: 0.6;
+  }
+
+  .furn {
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .furn .body {
+    fill: rgba(192, 138, 60, 0.08);
+    stroke: rgba(192, 138, 60, 0.35);
+    stroke-width: 1;
+    transition: all 0.35s;
+  }
+  .furn:hover .body {
+    fill: rgba(192, 138, 60, 0.25);
+    stroke: var(--brass-lt);
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 10px rgba(192, 138, 60, 0.35));
+  }
+  .furn .flabel {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7px; letter-spacing: 0.06em;
+    text-transform: uppercase; text-anchor: middle;
+    fill: var(--brass); opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .furn:hover .flabel { opacity: 0.8; }
+
+  /* Tooltip */
+  .tip {
+    position: absolute;
+    background: var(--ink);
+    border: 1px solid var(--brass);
+    border-radius: 8px;
+    padding: 14px 18px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 100;
+    width: 210px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.55);
+    pointer-events: none;
+  }
+  .tip.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .tip .t-room {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 0.11em;
+    text-transform: uppercase; color: var(--brass); margin-bottom: 5px;
+  }
+  .tip .t-name {
+    font-size: 19px; color: var(--bone); line-height: 1.2; margin-bottom: 5px;
+  }
+  .tip .t-desc {
+    font-size: 13px; color: var(--stone); line-height: 1.4; margin-bottom: 10px;
+  }
+  .tip .t-link {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--brass);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(192, 138, 60, 0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tip .t-link:hover { border-color: var(--brass-lt); color: var(--brass-lt); }
+
+  /* Entrance label */
+  .entrance-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 0.1em;
+    text-transform: uppercase; fill: var(--stone);
+    text-anchor: middle; opacity: 0.5;
+  }
+
+  /* Bottom stats */
+  .bstats {
+    display: flex; flex-wrap: wrap; gap: 10px 24px;
+    justify-content: center; margin-top: 28px; max-width: 960px;
+  }
+  .bs {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; color: var(--stone);
+    padding: 7px 14px;
+    background: rgba(192, 138, 60, 0.05);
+    border: 1px solid rgba(192, 138, 60, 0.14);
+    border-radius: 18px;
+  }
+  .bs b { color: var(--brass-lt); font-weight: 400; }
+</style>
+</head>
+<body>
+
+<div class="section-head">
+  <span class="eyebrow">Полный цикл</span>
+  <h2>Вся мебель для дома — в одном месте</h2>
+  <p class="subtitle">Наведите на любой предмет, чтобы узнать подробнее</p>
+</div>
+
+<div class="floor-wrap" id="fw" style="position:relative">
+<svg viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg" style="display:block;background:var(--forest-900)">
+
+  <!-- ══ ROOMS ══ -->
+  <rect x="30" y="30" width="360" height="350" class="room-bg"/>
+  <rect x="30" y="380" width="360" height="230" class="room-bg" style="fill:rgba(21,48,41,0.55)"/>
+  <rect x="390" y="30" width="200" height="350" class="room-bg" style="fill:rgba(21,48,41,0.45)"/>
+  <rect x="590" y="30" width="340" height="300" class="room-bg"/>
+  <rect x="390" y="380" width="200" height="230" class="room-bg" style="fill:rgba(21,48,41,0.45)"/>
+  <rect x="590" y="380" width="160" height="230" class="room-bg" style="fill:rgba(21,48,41,0.6)"/>
+  <rect x="750" y="330" width="180" height="280" class="room-bg" style="fill:rgba(21,48,41,0.5)"/>
+
+  <!-- ══ OUTER WALLS ══ -->
+  <!-- Top -->
+  <line x1="30" y1="30" x2="930" y2="30" class="wall"/>
+  <!-- Left -->
+  <line x1="30" y1="30" x2="30" y2="610" class="wall"/>
+  <!-- Right -->
+  <line x1="930" y1="30" x2="930" y2="610" class="wall"/>
+  <!-- Bottom left (кухня) -->
+  <line x1="30" y1="610" x2="390" y2="610" class="wall"/>
+  <!-- Bottom прихожая — with entrance gap -->
+  <line x1="390" y1="610" x2="450" y2="610" class="wall"/>
+  <!-- GAP = entrance 450–530 -->
+  <line x1="530" y1="610" x2="590" y2="610" class="wall"/>
+  <!-- Bottom ванная + детская -->
+  <line x1="590" y1="610" x2="930" y2="610" class="wall"/>
+
+  <!-- Entrance door -->
+  <path d="M 450 610 Q 450 580 480 580" opacity="0.2" stroke="var(--bone)" stroke-width="1.5" fill="none"/>
+  <line x1="450" y1="610" x2="450" y2="605" class="wall"/>
+  <line x1="530" y1="610" x2="530" y2="605" class="wall"/>
+  <text x="490" y="630" class="entrance-label">Вход</text>
+
+  <!-- ══ INNER WALLS ══ -->
+  <!-- Гостиная — Столовая (проём 340–380) -->
+  <line x1="390" y1="30" x2="390" y2="340" class="wall-inner"/>
+  <!-- Кухня — Прихожая (дверь 430–470) -->
+  <line x1="390" y1="380" x2="390" y2="430" class="wall-inner"/>
+  <line x1="390" y1="470" x2="390" y2="610" class="wall-inner"/>
+
+  <line x1="590" y1="30" x2="590" y2="270" class="wall-inner"/>
+  <line x1="590" y1="310" x2="590" y2="330" class="wall-inner"/>
+  <line x1="590" y1="330" x2="930" y2="330" class="wall-inner"/>
+  <line x1="590" y1="380" x2="590" y2="610" class="wall-inner"/>
+  <!-- Детская — вход из переходной зоны/коридора (разрыв 345–380) -->
+  <line x1="750" y1="330" x2="750" y2="345" class="wall-inner"/>
+  <line x1="750" y1="380" x2="750" y2="610" class="wall-inner"/>
+  <line x1="590" y1="380" x2="750" y2="380" class="wall-inner"/>
+  <!-- арка гостиная-кухня (короткие стенки-пилоны) -->
+  <line x1="30" y1="380" x2="110" y2="380" class="wall-inner"/>
+  <line x1="280" y1="380" x2="390" y2="380" class="wall-inner"/>
+
+  <!-- ══ ROOM LABELS ══ -->
+  <text x="210" y="60" class="room-label">Гостиная</text>
+  <text x="210" y="410" class="room-label">Кухня</text>
+  <text x="490" y="60" class="room-label">Столовая</text>
+  <text x="760" y="60" class="room-label">Спальня</text>
+  <text x="490" y="410" class="room-label">Прихожая</text>
+  <text x="670" y="410" class="room-label">Ванная</text>
+  <text x="840" y="360" class="room-label">Детская</text>
+
+  <!-- ══ DOOR ARCS ══ -->
+  <g opacity="0.15" stroke="var(--bone)" stroke-width="1" fill="none">
+    <path d="M 390 340 Q 420 360 390 380"/>
+    <path d="M 590 270 Q 620 290 590 310"/>
+    <!-- дверь кухня-гостиная убрана (арка) -->
+    <path d="M 640 380 Q 660 355 680 380"/>
+    <!-- Дверь прихожая → кухня -->
+    <path d="M 390 430 Q 365 450 390 470"/>
+    <!-- Вход в Детскую из коридора (через переходную зону) -->
+    <path d="M 750 345 Q 770 362 750 380"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ ГОСТИНАЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Диван (литой L-формы, у левой стены) -->
+  <g class="furn" data-room="Гостиная" data-name="Диван" data-desc="Мягкая мебель на заказ — любой размер, форма и обивка" data-link="krovati/">
+    <path d="M 54 80 h 158 a6,6,0,0,1,6,6 v 58 a6,6,0,0,1,-6,6 h -94 a6,6,0,0,0,-6,6 v 158 a6,6,0,0,1,-6,6 h -58 a6,6,0,0,1,-6,-6 v -228 a6,6,0,0,1,6,-6 z" class="body"/>
+    <text x="83" y="335" class="flabel">Диван</text>
+  </g>
+
+
+<!-- Журнальный столик -->
+  <g class="furn" data-room="Гостиная" data-name="Журнальный столик" data-desc="Кофейный или журнальный столик — дерево, стекло, камень" data-link="biznes/">
+    <ellipse cx="215" cy="235" rx="28" ry="40" class="body"/>
+    <text x="215" y="290" class="flabel">Столик</text>
+  </g>
+
+  <!-- ТВ-зона (прямоугольник у правой стены гостиной) -->
+  <g class="furn" data-room="Гостиная" data-name="ТВ-зона" data-desc="Тумба, полки, подсветка — единый ансамбль под интерьер" data-link="gostinye/">
+    <rect x="342" y="115" width="32" height="188" rx="2" class="body"/>
+    <!-- плазма по центру тумбы + 4 ножки -->
+    <rect x="355" y="125" width="5" height="168" rx="1" style="fill:rgba(192,138,60,0.2);stroke:rgba(192,138,60,0.55);stroke-width:0.8"/>
+    <!-- ножки (диагональные, короче, в пределах ТВ) -->
+    <line x1="357" y1="202" x2="346" y2="195" style="stroke:rgba(192,138,60,0.45);stroke-width:1"/>
+    <line x1="359" y1="202" x2="370" y2="195" style="stroke:rgba(192,138,60,0.45);stroke-width:1"/>
+    <line x1="357" y1="228" x2="346" y2="235" style="stroke:rgba(192,138,60,0.45);stroke-width:1"/>
+    <line x1="359" y1="228" x2="370" y2="235" style="stroke:rgba(192,138,60,0.45);stroke-width:1"/>
+    <text x="338" y="107" class="flabel">ТВ-зона</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ СТОЛОВАЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Обеденный стол -->
+  <g class="furn" data-room="Столовая" data-name="Обеденный стол" data-desc="Массив или шпон, раздвижной или стационарный — любая форма и размер" data-link="biznes/">
+    <rect x="435" y="130" width="110" height="75" rx="4" class="body"/>
+    <rect x="450" y="115" width="24" height="12" rx="4" class="body"/>
+    <rect x="505" y="115" width="24" height="12" rx="4" class="body"/>
+    <rect x="450" y="208" width="24" height="12" rx="4" class="body"/>
+    <rect x="505" y="208" width="24" height="12" rx="4" class="body"/>
+    <rect x="420" y="156" width="12" height="24" rx="4" class="body"/>
+    <rect x="548" y="156" width="12" height="24" rx="4" class="body"/>
+    <text x="490" y="106" class="flabel">Обеденный стол</text>
+  </g>
+
+  <!-- Стеллаж (одна вытянутая плитка, выше двери) -->
+  <g class="furn" data-room="Столовая" data-name="Стеллаж" data-desc="Открытые полки, витрины, книжные шкафы — для любого помещения" data-link="biznes/">
+    <rect x="396" y="240" width="18" height="90" rx="2" class="body"/>
+    <text x="430" y="285" class="flabel">Стеллаж</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ КУХНЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Кухонный гарнитур (L-форма + столешница в одной группе) -->
+  <g class="furn" data-room="Кухня" data-name="Кухонный гарнитур" data-desc="Фасады, корпус, фурнитура, столешница — проектируем точно под размер" data-link="kuhni/">
+    <path d="M 40 430 h 50 v 115 h 290 v 55 h -340 z" class="body"/>
+    <rect x="150" y="460" width="130" height="45" rx="3" class="body"/>
+    <ellipse cx="200" cy="565" rx="18" ry="12" class="body" style="fill:none"/>
+    <rect x="275" y="550" width="55" height="38" rx="2" class="body"/>
+    <circle cx="290" cy="560" r="5" class="body" style="fill:none"/>
+    <circle cx="315" cy="560" r="5" class="body" style="fill:none"/>
+    <circle cx="290" cy="577" r="5" class="body" style="fill:none"/>
+    <circle cx="315" cy="577" r="5" class="body" style="fill:none"/>
+    <text x="210" y="537" class="flabel">Кухонный гарнитур</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ СПАЛЬНЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Кровать (укорочена) -->
+  <g class="furn" data-room="Спальня" data-name="Кровать" data-desc="С подъёмным механизмом, бельевым ящиком или мягким изголовьем" data-link="krovati/">
+    <rect x="660" y="80" width="160" height="185" rx="6" class="body"/>
+    <rect x="660" y="80" width="160" height="25" rx="4" class="body" style="fill:rgba(192,138,60,0.14)"/>
+    <rect x="690" y="120" width="40" height="20" rx="8" class="body" style="fill:none"/>
+    <rect x="750" y="120" width="40" height="20" rx="8" class="body" style="fill:none"/>
+    <text x="740" y="72" class="flabel">Кровать</text>
+  </g>
+
+  <!-- Шкаф-купе (обрезан в линию с изголовьем) -->
+  <g class="furn" data-room="Спальня" data-name="Шкаф-купе" data-desc="Встроенный или корпусный, с зеркалами и подсветкой" data-link="shkafy/">
+    <rect x="870" y="80" width="48" height="200" rx="2" class="body"/>
+    <!-- вешалки (крючок + плечики + перекладина) -->
+    <g opacity="0.4" fill="none" stroke="var(--brass)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 894 113 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 894 148 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 894 183 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 894 218 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 894 253 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+    </g>
+    <text x="894" y="296" class="flabel">Шкаф-купе</text>
+  </g>
+
+  <!-- Комод (у стены, отступ 12px как у шкафа-купе) -->
+  <g class="furn" data-room="Спальня" data-name="Комод" data-desc="Вместительные ящики, плавное закрывание" data-link="komody/">
+    <rect x="660" y="296" width="160" height="22" rx="3" class="body"/>
+    <line x1="660" y1="304" x2="820" y2="304" stroke="rgba(192,138,60,0.15)" stroke-width="0.5"/>
+    <line x1="660" y1="312" x2="820" y2="312" stroke="rgba(192,138,60,0.15)" stroke-width="0.5"/>
+    <text x="740" y="288" class="flabel">Комод</text>
+  </g>
+
+  <!-- Прикроватные тумбы (раздвинуты от кровати) -->
+  <g class="furn" data-room="Спальня" data-name="Прикроватная тумба" data-desc="Компактное хранение рядом с кроватью" data-link="komody/">
+    <rect x="617" y="85" width="35" height="30" rx="3" class="body"/>
+    <rect x="828" y="85" width="35" height="30" rx="3" class="body"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ ПРИХОЖАЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Прихожая (шкаф + вешалка — у правой стены, вертикально) -->
+  <g class="furn" data-room="Прихожая" data-name="Прихожая" data-desc="Шкаф, вешалка, зеркало, обувница — всё в едином стиле" data-link="prihozhie/">
+    <rect x="540" y="420" width="40" height="170" rx="2" class="body"/>
+    <!-- вешалки (крючок + плечики + перекладина) -->
+    <g opacity="0.4" fill="none" stroke="var(--brass)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 560 443 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 560 478 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 560 513 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 560 548 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+    </g>
+    <text x="560" y="412" class="flabel">Прихожая</text>
+  </g>
+
+  <!-- Обувница (у левой стены, вертикально) -->
+  <g class="furn" data-room="Прихожая" data-name="Обувница" data-desc="Узкая, с откидными полками — экономит место" data-link="prihozhie/">
+    <rect x="395" y="510" width="30" height="70" rx="2" class="body"/>
+    <text x="410" y="502" class="flabel">Обувница</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ ВАННАЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Тумба под раковину (у нижней стены) -->
+  <g class="furn" data-room="Ванная" data-name="Тумба под раковину" data-desc="Влагостойкая тумба с раковиной — любой размер и цвет" data-link="tumby/">
+    <rect x="630" y="560" width="80" height="40" rx="3" class="body"/>
+    <ellipse cx="670" cy="572" rx="22" ry="12" class="body" style="fill:none"/>
+    <text x="670" y="552" class="flabel">Тумба</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ══ ДЕТСКАЯ ══ -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Детская кровать (перевёрнута, изголовье внизу) -->
+  <g class="furn" data-room="Детская" data-name="Детская кровать" data-desc="Кроватка, чердак или двухъярусная — под возраст ребёнка" data-link="krovati/">
+    <rect x="860" y="480" width="60" height="110" rx="5" class="body"/>
+    <rect x="860" y="572" width="60" height="18" rx="3" class="body" style="fill:rgba(192,138,60,0.14)"/>
+    <text x="890" y="472" class="flabel">Кровать</text>
+  </g>
+
+  <!-- Детский шкаф (у противоположной/левой стены) -->
+  <g class="furn" data-room="Детская" data-name="Детский шкаф" data-desc="Шкаф, пенал или стеллаж для детской" data-link="shkafy/">
+    <rect x="758" y="400" width="48" height="120" rx="2" class="body"/>
+    <!-- вешалки -->
+    <g opacity="0.4" fill="none" stroke="var(--brass)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 782 418 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 782 453 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+      <path d="M 782 488 a2.5,2.5,0,1,1,0.1,0 m-0.1,2 l0,3 l-10,8 h20 l-10,-8"/>
+    </g>
+    <text x="782" y="392" class="flabel">Шкаф</text>
+  </g>
+
+</svg>
+
+<div class="tip" id="tip">
+  <div class="t-room"></div>
+  <div class="t-name"></div>
+  <div class="t-desc"></div>
+  <a class="t-link" href="#">Смотреть каталог →</a>
+</div>
+</div>
+
+<div class="bstats">
+  <div class="bs"><b>6</b> помещений</div>
+  <div class="bs"><b>15</b> позиций мебели</div>
+  <div class="bs"><b>1</b> производитель</div>
+  <div class="bs">Всё — по вашим размерам</div>
+</div>
+
+<script>
+(function() {
+  var fw  = document.getElementById('fw');
+  var svg = fw.querySelector('svg');
+  var tip = document.getElementById('tip');
+  var tRoom = tip.querySelector('.t-room');
+  var tName = tip.querySelector('.t-name');
+  var tDesc = tip.querySelector('.t-desc');
+  var tLink = tip.querySelector('.t-link');
+  var active = null;
+  var hoverEl = null;
+
+  /* Position tooltip anchored to the SVG element, not the cursor */
+  function posFromEl(el) {
+    var bbox = el.getBoundingClientRect();
+    var fwR = fw.getBoundingClientRect();
+
+    /* Center-right of the element */
+    var x = bbox.right - fwR.left + 14;
+    var y = bbox.top - fwR.top + bbox.height / 2 - 60;
+
+    /* Flip left if overflows right */
+    if (x + 220 > fwR.width) x = bbox.left - fwR.left - 228;
+    /* Keep within vertical bounds */
+    if (y + 160 > fwR.height) y = fwR.height - 165;
+    if (y < 6) y = 6;
+
+    tip.style.left = x + 'px';
+    tip.style.top  = y + 'px';
+  }
+
+  function show(el) {
+    tRoom.textContent = el.dataset.room;
+    tName.textContent = el.dataset.name;
+    tDesc.textContent = el.dataset.desc;
+    var link = el.dataset.link;
+    tLink.style.display = link ? '' : 'none';
+    if (link) tLink.href = link;
+    posFromEl(el);
+    tip.classList.add('show');
+  }
+
+  function hide() { tip.classList.remove('show'); active = null; hoverEl = null; }
+
+  document.querySelectorAll('.furn').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (active === el) { hide(); return; }
+      active = el;
+      show(el);
+    });
+    el.addEventListener('mouseenter', function() {
+      hoverEl = el;
+      if (!active) show(el);
+    });
+    el.addEventListener('mouseleave', function() {
+      hoverEl = null;
+      if (!active) hide();
+    });
+  });
+
+  /* Keep tooltip visible when hovering the tooltip itself */
+  tip.addEventListener('mouseenter', function() { hoverEl = active; });
+  tip.addEventListener('mouseleave', function() {
+    if (!active) hide();
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.furn') && !e.target.closest('.tip')) hide();
+  });
+
+  /* Reposition on resize */
+  window.addEventListener('resize', function() {
+    if (active) posFromEl(active);
+  });
+})();
+</script>
+
+</body>
+</html>

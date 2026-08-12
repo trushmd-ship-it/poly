@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /?utm_*
+Disallow: /*?preview*
+
+Sitemap: https://mebelcomspb.ru/sitemap.xml
+
+Host: mebelcomspb.ru

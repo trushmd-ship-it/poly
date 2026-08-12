@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мебель на заказ в Санкт-Петербурге — MEBELCOM | Кухни, шкафы, гардеробные по индивидуальным размерам</title>
+<meta name="description" content="Проектируем и производим мебель по индивидуальным размерам в Санкт-Петербурге. Бесплатный замер, 3D-визуализация до оплаты, собственное производство. Кухни, шкафы, гардеробные, прихожие, гостиные.">
+<link rel="canonical" href="https://mebelcomspb.ru/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="MEBELCOM">
+<meta property="og:title" content="Мебель на заказ в Санкт-Петербурге — MEBELCOM">
+<meta property="og:description" content="Проектируем и производим мебель по индивидуальным размерам. Бесплатный замер, 3D-визуализация, собственное производство.">
+<meta property="og:url" content="https://mebelcomspb.ru/">
+<meta property="og:image" content="https://mebelcomspb.ru/img/og-cover.jpg">
+
+<!-- Верификация -->
+<meta name="yandex-verification" content="1898f0455f605ce6">
+<meta name="google-site-verification" content="BXBdwW8Zf_vWYuvXB1NSmte7_Wlj9tpDctDpTb6OcvM">
+
+<!-- Шрифты -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<!-- Стили -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "MEBELCOM",
+  "description": "Проектируем и производим мебель по индивидуальным размерам в Санкт-Петербурге",
+  "url": "https://mebelcomspb.ru",
+  "telephone": ["+79218850588", "+79363036665"],
+  "email": "info@mebelcomspb.ru",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Санкт-Петербург",
+    "streetAddress": "Придорожная аллея 8, БЦ Реформа",
+    "addressCountry": "RU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 60.0522,
+    "longitude": 30.3308
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  "priceRange": "от 45 000 ₽",
+  "image": "https://mebelcomspb.ru/img/og-cover.jpg",
+  "sameAs": [
+    "https://t.me/mebelcomspb",
+    "https://vk.com/mebelkyxnu"
+  ]
+}
+</script>
+
+<!-- Яндекс.Метрика -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(92089713,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<noscript><img src="https://mc.yandex.ru/watch/92089713" style="position:absolute;left:-9999px" alt=""></noscript>
+</head>
+<body>
+
+<!-- ═══ ШАПКА ═══ -->
+<header id="hdr">
+  <div class="wrap">
+    <div class="hbar">
+      <a href="index.html" class="logo">MEBELCOM<em>.</em><small>Мебель на заказ · Санкт-Петербург</small></a>
+      <nav class="main">
+        <a href="kuhni/index.html">Кухни</a>
+        <a href="garderobnye/index.html">Гардеробные</a>
+        <a href="shkafy/index.html">Шкафы</a>
+        <a href="portfolio/index.html">Портфолио</a>
+        <a href="proizvodstvo/index.html">Производство</a>
+        <a href="kak-rabotaem/index.html">Как работаем</a>
+        <a href="materialy/index.html">Материалы</a>
+        <a href="kontakty/index.html">Контакты</a><a href="faq/index.html">FAQ</a>
+      </nav>
+      <a href="tel:+79218850588" class="htel">+7 (921) 88-505-88</a>
+      <button class="burger" id="burger" aria-label="Меню"><i></i></button>
+    </div>
+    <div class="mmenu" id="mmenu">
+      <a href="kuhni/index.html">Кухни<span>01</span></a>
+      <a href="garderobnye/index.html">Гардеробные<span>02</span></a>
+      <a href="shkafy/index.html">Шкафы<span>03</span></a>
+      <a href="portfolio/index.html">Портфолио<span>04</span></a>
+      <a href="proizvodstvo/index.html">Производство<span>05</span></a>
+      <a href="kak-rabotaem/index.html">Как работаем<span>06</span></a>
+      <a href="materialy/index.html">Материалы<span>07</span></a>
+      <a href="kontakty/index.html">Контакты<span>08</span></a>
+      <a href="o-kompanii/index.html">О компании<span>09</span></a><a href="faq/index.html">Частые вопросы<span>10</span></a>
+      <a href="tel:+79218850588" class="mtel">+7 (921) 88-505-88</a>
+      <a href="#zayavka" class="btn wide">Рассчитать стоимость <span class="ar">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ 00. HERO ═══ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="herogrid">
+      <div>
+        <span class="eyebrow">Мебель на заказ · Санкт-Петербург</span>
+        <h1>Мебель,<br>созданная под<br><em>ваше</em> пространство</h1>
+        <p class="lede" style="color:rgba(239,235,226,.68);margin-top:var(--s3)">Проектируем, производим и устанавливаем мебель по индивидуальным размерам. Собственное производство в Санкт-Петербурге.</p>
+        <div class="heroact">
+          <a href="#zayavka" class="btn">Рассчитать стоимость <span class="ar">→</span></a>
+          <a href="portfolio/index.html" class="btn ghost">Смотреть проекты</a>
+        </div>
+      </div>
+      <div class="heroimg">
+        <div class="ph dk has-img">
+          <img src="img/hero-kitchen.webp" alt="Кухня на заказ в Санкт-Петербурге — тёмные фасады, встроенная техника, подсветка" width="1000" height="1500" loading="eager">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ПОЛОСА ГАРАНТИЙ ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="assure rv">
+      <div><span class="num"></span><b>Бесплатный замер</b><span class="t">Бесплатный выезд мастера в пределах Санкт-Петербурга</span></div>
+      <div><span class="num"></span><b>Бесплатная 3D-визуализация</b><span class="t">Видите мебель до того, как она изготовлена</span></div>
+      <div><span class="num"></span><b>Своё производство</b><span class="t">Производим от идеи до готового изделия</span></div>
+      <div><span class="num"></span><b>Гарантия по договору</b><span class="t">На изготовление, фурнитуру, монтаж и сроки производства</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 01. НАПРАВЛЕНИЯ ═══ -->
+<section class="sec bone">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Что мы создаём</h2>
+      <p class="lede">Каждое направление — отдельная страница с проектами, материалами и ценами.</p>
+    </div>
+    <div class="g3">
+      <a class="dir rv" href="kuhni/index.html">
+        <div class="ph r43 has-img"><img src="img/portfolio/kuhnya-01.webp" alt="Кухня на заказ — тёмные фасады МДФ, подсветка" width="1000" height="1000" loading="lazy"></div>
+        <div class="dirtop"><h3>Кухни</h3><span class="price">от 000 000 ₽</span></div>
+        <p>МДФ в плёнке, акриле, пластике и ЛДСП. Проект под ваши стены, короба и технику.</p>
+      </a>
+      <a class="dir rv" href="garderobnye/index.html" style="transition-delay:70ms">
+        <div class="ph r43 has-img"><img src="img/portfolio/garderobnaya-03-premium.webp" alt="Гардеробная премиум — тёмные фасады, стеклянные двери, остров, LED-подсветка" width="1000" height="1000" loading="lazy"></div>
+        <div class="dirtop"><h3>Гардеробные</h3><span class="price">от 000 000 ₽</span></div>
+        <p>Наполнение под ваш гардероб: штанги, полки, ящики, обувные модули.</p>
+      </a>
+      <a class="dir rv" href="shkafy/index.html" style="transition-delay:140ms">
+        <div class="ph r43"><b>Фото: шкафы</b></div>
+        <div class="dirtop"><h3>Шкафы и шкафы-купе</h3><span class="price">от 000 000 ₽</span></div>
+        <p>В нишу, до потолка, с подсветкой и доводчиками.</p>
+      </a>
+      <a class="dir rv" href="prihozhie/index.html" style="transition-delay:210ms">
+        <div class="ph r43 has-img"><img src="img/portfolio/prihozhaya-02-olive.webp" alt="Прихожая — оливковые крашеные фасады, банкетка, обувница, зеркало" width="1000" height="1000" loading="lazy"></div>
+        <div class="dirtop"><h3>Прихожие</h3><span class="price">от 000 000 ₽</span></div>
+        <p>Хранение в узком коридоре без потери прохода.</p>
+      </a>
+      <a class="dir rv" href="gostinye/index.html" style="transition-delay:280ms">
+        <div class="ph r43 has-img"><img src="img/portfolio/gostinaya-01-tv.webp" alt="Гостиная — ТВ-зона с закрытым хранением и открытыми полками" width="1000" height="1000" loading="lazy"></div>
+        <div class="dirtop"><h3>Гостиные</h3><span class="price">от 000 000 ₽</span></div>
+        <p>ТВ-зоны, стеллажи и системы хранения во всю стену.</p>
+      </a>
+      <a class="dir rv" href="divany/index.html" style="transition-delay:350ms">
+        <div class="ph r43"><b>Фото: диваны</b></div>
+        <div class="dirtop"><h3>Диваны</h3><span class="price">от 000 000 ₽</span></div>
+        <p>Прямые, угловые и модульные. Обивка и механизм — на выбор.</p>
+      </a>
+      <a class="dir rv" href="krovati/index.html" style="transition-delay:420ms">
+        <div class="ph r43"><b>Фото: кровати</b></div>
+        <div class="dirtop"><h3>Кровати</h3><span class="price">от 000 000 ₽</span></div>
+        <p>Мягкое изголовье, подъёмный механизм, встроенное хранение.</p>
+      </a>
+      <a class="dir rv" href="transformery/index.html" style="transition-delay:490ms">
+        <div class="ph r43"><b>Фото: трансформеры</b></div>
+        <div class="dirtop"><h3>Трансформеры</h3><span class="price">от 000 000 ₽</span></div>
+        <p>Шкаф-кровать, стол-трансформер, откидные и встроенные конструкции.</p>
+      </a>
+      <a class="dir rv" href="biznes/index.html" style="transition-delay:560ms">
+        <div class="ph r43"><b>Фото: мебель для бизнеса</b></div>
+        <div class="dirtop"><h3>Мебель для бизнеса</h3><span class="price">по проекту</span></div>
+        <p>Офисы, салоны, кафе и ресепшены. Работаем по договору с юрлицами.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02. ПОРТФОЛИО ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Реальные проекты<br>вместо длинных описаний</h2>
+    </div>
+    <div class="rail" id="rail">
+<a class="proj rv" href="portfolio/kuhnya-sovremennaya/index.html" data-cat="kuhni">
+      <div class="ph r11 has-img"><img src="img/portfolio/kuhnya-01.webp" alt="Кухня на заказ — тёмные фасады МДФ, подсветка" width="1000" height="1000" loading="lazy"></div>
+      <h3>Кухня в современной квартире</h3>
+      <div class="meta">Петроградская · МДФ в акриле · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/kuhnya-loft/index.html" data-cat="kuhni">
+      <div class="ph r11 has-img"><img src="img/portfolio/kuhnya-02-loft.webp" alt="Кухня в стиле лофт — остров, открытые полки, кирпичная стена" width="1000" height="1000" loading="lazy"></div>
+      <h3>Кухня в стиле лофт</h3>
+      <div class="meta">МДФ в эмали · Шпон · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/kuhnya-pod-potolok/index.html" data-cat="kuhni">
+      <div class="ph r11 has-img"><img src="img/portfolio/kuhnya-04-pod-potolok.webp" alt="Кухня до потолка — бежевые фасады, встроенная техника, подсветка" width="1000" height="1000" loading="lazy"></div>
+      <h3>Кухня до потолка со встроенной техникой</h3>
+      <div class="meta">МДФ в плёнке · Подсветка · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/kuhnya-minimalizm/index.html" data-cat="kuhni">
+      <div class="ph r11 has-img"><img src="img/portfolio/kuhnya-05-minimalizm.webp" alt="Кухня минимализм — мраморный остров, фасады до потолка, панорамные окна" width="1000" height="1000" loading="lazy"></div>
+      <h3>Кухня в стиле минимализм</h3>
+      <div class="meta">МДФ в эмали · Кварцевый агломерат · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/shkaf-vstroenny/index.html" data-cat="shkafy">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-02-dark.webp" alt="Встроенный шкаф — тёмные фасады, зеркало, банкетка с ящиками" width="1000" height="1000" loading="lazy"></div>
+      <h3>Встроенный шкаф с зеркалом и банкеткой</h3>
+      <div class="meta">ЛДСП дуб · МДФ в эмали · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/garderobnaya-premium/index.html" data-cat="garderobnye">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-03-premium.webp" alt="Гардеробная премиум — тёмные фасады, стеклянные двери, остров, LED-подсветка" width="1000" height="1000" loading="lazy"></div>
+      <h3>Гардеробная комната премиум</h3>
+      <div class="meta">МДФ в эмали · Стекло · Подсветка · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/garderobnaya-terracotta/index.html" data-cat="garderobnye">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-02-terracotta.webp" alt="Гардеробная лофт — терракотовые фасады, открытые секции, кирпичная стена" width="1000" height="1000" loading="lazy"></div>
+      <h3>Гардеробная в стиле лофт</h3>
+      <div class="meta">МДФ в эмали · Кирпич · Трек-свет · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/garderobnaya-walkin/index.html" data-cat="garderobnye">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-01-walkin.webp" alt="Гардеробная комната — штанги, полки, комод, обувные полки" width="1000" height="1000" loading="lazy"></div>
+      <h3>Гардеробная комната с наполнением</h3>
+      <div class="meta">ЛДСП · Штанги · Ящики · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/kuhnya-ostrov/index.html" data-cat="kuhni">
+      <div class="ph r11 has-img"><img src="img/portfolio/kuhnya-03-loft-kvartira.webp" alt="Кухня лофт в квартире — остров, кирпичная стена, открытые полки" width="1000" height="1000" loading="lazy"></div>
+      <h3>Кухня с островом в стиле лофт</h3>
+      <div class="meta">МДФ в эмали · Кирпич · Шпон · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/prihozhaya-olive/index.html" data-cat="prihozhie">
+      <div class="ph r11 has-img"><img src="img/portfolio/prihozhaya-02-olive.webp" alt="Прихожая — оливковые крашеные фасады, банкетка, обувница, зеркало" width="1000" height="1000" loading="lazy"></div>
+      <h3>Прихожая с банкеткой и обувницей</h3>
+      <div class="meta">МДФ в эмали · Шпон дуба · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/shkaf-kupe-mirror/index.html" data-cat="shkafy">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-04-kupe.webp" alt="Шкаф-купе в спальне — три двери, зеркало, чёрный профиль, ЛДСП дуб" width="1000" height="1000" loading="lazy"></div>
+      <h3>Шкаф-купе с зеркалом в спальню</h3>
+      <div class="meta">ЛДСП дуб · Зеркало бронза · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/shkaf-kupe-glass/index.html" data-cat="shkafy">
+      <div class="ph r11 has-img"><img src="img/portfolio/garderobnaya-03-glass.webp" alt="Шкаф-купе — раздвижные двери из матового стекла, внутренняя подсветка" width="1000" height="1000" loading="lazy"></div>
+      <h3>Шкаф-купе с матовым стеклом</h3>
+      <div class="meta">ЛДСП · Матовое стекло · Подсветка · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/prihozhaya-dark/index.html" data-cat="prihozhie">
+      <div class="ph r11 has-img"><img src="img/portfolio/prihozhaya-04-dark.webp" alt="Прихожая — тёмные фасады, шпон ореха, подсветка, откидная обувница" width="1000" height="1000" loading="lazy"></div>
+      <h3>Прихожая с подсветкой и обувницей</h3>
+      <div class="meta">МДФ в эмали · Шпон ореха · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/prihozhaya-blue/index.html" data-cat="prihozhie">
+      <div class="ph r11 has-img"><img src="img/portfolio/prihozhaya-03-blue.webp" alt="Прихожая в узком коридоре — синие фасады, зеркало, банкетка с обувницей" width="1000" height="1000" loading="lazy"></div>
+      <h3>Прихожая в узком коридоре</h3>
+      <div class="meta">МДФ в эмали · ЛДСП дуб · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/kompleks-01/index.html" data-cat="gostinye">
+      <div class="ph r11 has-img"><img src="img/portfolio/gostinaya-01-tv.webp" alt="Гостиная — ТВ-зона с закрытым хранением и открытыми полками" width="1000" height="1000" loading="lazy"></div>
+      <h3>Гостиная с ТВ-зоной и стеллажом</h3>
+      <div class="meta">ЛДСП дуб · МДФ в плёнке · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/gostinaya-tv/index.html" data-cat="gostinye">
+      <div class="ph r11 has-img"><img src="img/portfolio/gostinaya-02-olive.webp" alt="Гостиная — оливковые крашеные фасады, ТВ-тумба, шкаф-пенал" width="1000" height="1000" loading="lazy"></div>
+      <h3>Гостиная в оливковых тонах</h3>
+      <div class="meta">МДФ в эмали · ЛДСП дуб · 2026</div>
+    </a>
+<a class="proj rv" href="portfolio/gostinaya-loft/index.html" data-cat="gostinye">
+      <div class="ph r11 has-img"><img src="img/portfolio/gostinaya-03-loft.webp" alt="Гостиная лофт — ТВ-тумба и полки на кирпичной стене" width="1000" height="1000" loading="lazy"></div>
+      <h3>ТВ-зона на кирпичной стене</h3>
+      <div class="meta">ЛДСП дуб · МДФ в плёнке · 2026</div>
+    </a>
+</div>
+    <div class="railnav">
+      <button class="rbtn" data-rail="-1" aria-label="Назад">←</button>
+      <button class="rbtn" data-rail="1" aria-label="Вперёд">→</button>
+      <a href="portfolio/index.html" class="tlink" style="margin-left:var(--s2)">Все проекты →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03. КЕЙС ═══ -->
+<section class="sec bone">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">03 — Кейс</span>
+      <h2>Кухня в квартире<br>на Петроградской</h2>
+      <p class="lede">От первого фото до установки — один реальный заказ по шагам.</p>
+    </div>
+    <div class="case">
+      <div class="cs rv">
+        <div class="ph r11"><span class="tag">01</span><b>Фото: было</b></div>
+        <span class="n">Шаг 1</span><h3>Было</h3>
+        <p>Пустая ниша с выступом короба и неровной стеной.</p>
+      </div>
+      <div class="cs rv" style="transition-delay:80ms">
+        <div class="ph r11"><span class="tag">02</span><b>Фото: замер и чертёж</b></div>
+        <span class="n">Шаг 2</span><h3>Замер и чертёж</h3>
+        <p>Сняли размеры, учли короб, розетки и вентиляцию.</p>
+      </div>
+      <div class="cs rv" style="transition-delay:160ms">
+        <div class="ph r11"><span class="tag">03</span><b>Изображение: 3D-рендер</b></div>
+        <span class="n">Шаг 3</span><h3>3D-визуализация</h3>
+        <p>Согласовали планировку и фасады до оплаты.</p>
+      </div>
+      <div class="cs rv" style="transition-delay:240ms">
+        <div class="ph r11"><span class="tag">04</span><b>Фото: готовый результат</b></div>
+        <span class="n">Шаг 4</span><h3>Готово</h3>
+        <p>Изготовили и смонтировали. Срок — 00 рабочих дней.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══  ДОВЕРИЕ ═══ -->
+<section class="sec deep">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">Доверие</span>
+      <h2>Компания в цифрах</h2>
+    </div>
+    <div class="stats rv">
+      <div><b>13</b><span>лет на рынке</span></div>
+      <div><b>500+</b><span>выполненных проектов</span></div>
+      <div><b>550</b><span>м² собственного производства</span></div>
+      <div><b>2</b><span>года гарантии по договору</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05. ПРЕИМУЩЕСТВА ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Почему выбирают нас</h2>
+    </div>
+    <div class="g4">
+      <div class="adv rv"><span class="n"></span><h3>Собственное производство</h3><p>Изготавливаем сами, без подрядчиков. Поэтому контролируем и сроки, и качество.</p></div>
+      <div class="adv rv" style="transition-delay:70ms"><span class="n"></span><h3>Проект под помещение</h3><p>Каждый сантиметр считается под конкретные стены, короба и розетки.</p></div>
+      <div class="adv rv" style="transition-delay:140ms"><span class="n"></span><h3>Честная цена</h3><p>Заказ напрямую у производителя — без наценки салонов и посредников.</p></div>
+      <div class="adv rv" style="transition-delay:210ms"><span class="n"></span><h3>Полный цикл</h3><p>Замер, проект, производство, доставка и монтаж — в одних руках.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06. ПРОИЗВОДСТВО ═══ -->
+<section class="sec bone">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">Наше производство</span>
+      <h2>Показываем цех,<br>а не только результат</h2>
+      <p class="lede">Собственное производство в Ново-Ковалёво. Посмотрите, где и как изготавливается ваша мебель.</p>
+    </div>
+    <div class="g4">
+      <div class="rv"><div class="ph r11"><b>Фото: цех, общий план</b></div></div>
+      <div class="rv" style="transition-delay:70ms"><div class="ph r11"><b>Фото: раскрой</b></div></div>
+      <div class="rv" style="transition-delay:140ms"><div class="ph r11"><b>Фото: кромление</b></div></div>
+      <div class="rv" style="transition-delay:210ms"><div class="ph r11"><b>Фото: сборка</b></div></div>
+    </div>
+    <div style="margin-top:var(--s4)"><a href="proizvodstvo/index.html" class="tlink">Посмотреть производство →</a></div>
+  </div>
+</section>
+
+<!-- ═══ 07. МАТЕРИАЛЫ ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">Материалы</span>
+      <h2>С чем мы работаем</h2>
+      <p class="lede">Варианты материалов для фасадов, корпуса и столешниц. Подбираем под задачу и бюджет.</p>
+    </div>
+    <div class="mats">
+      <div class="mat rv">
+        <i style="background:#3E5A50"></i>
+        
+        <h3>МДФ в акриле  <span class="own">Красим сами</span></h3><p>Любой цвет по каталогу RAL, матовый, сатин или глянец.</p>
+        
+      </div>
+      <div class="mat rv" style="transition-delay:70ms">
+        <i style="background:#D6CCBB"></i>
+        <h3>МДФ в плёнке</h3><p>Практичный вариант, широкий выбор цвета и фрезеровки.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:140ms">
+        <i style="background:#ECE8E1"></i>
+        <h3>Заменить </h3><p>Заменить.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:210ms">
+        <i style="background:#2F373B"></i>
+        <h3>МДФ в пластике</h3><p>Износостойкая поверхность для активной кухни.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:280ms">
+        <i style="background:#B6976F"></i>
+        <h3>ЛДСП</h3><p>Оптимально по цене, большой выбор декоров под дерево.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:350ms">
+        <i style="background:#8A5F33"></i>
+        <h3>Акриловый камень</h3><p>Столешницы без видимых швов, любой формы.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:420ms">
+        <i style="background:#F1EDE6"></i>
+        <h3>Стекло с декором</h3><p> Дописать.</p>
+      </div>
+      <div class="mat rv" style="transition-delay:490ms">
+        <i style="background:#6E7A7D"></i>
+        <h3>Материал по запросу клиента</h3><p>Ламарти, кварц, шпон, массив, натуральный камень, HPL.</p>
+      </div>
+    </div>
+    <div class="paint rv">
+      <div>
+        <span class="eyebrow">Наше преимущество</span>
+        <h3>Свой покрасочный цех</h3>
+        <p>Красим фасады сами, не отдавая на сторону. Поэтому крашеная мебель обходится примерно как плёночная — а выглядит дороже и служит дольше.</p>
+      </div>
+      <ul>
+        <li>Любой цвет по каталогу RAL, а не выбор из десяти плёнок</li>
+        <li>Матовая, сатиновая или глянцевая поверхность на выбор</li>
+        <li>Нет швов и отслоений по краям, как у плёнки со временем</li>
+        <li>Докрасим фасад под уже существующую мебель или стены</li>
+      </ul>
+    </div>
+    <div style="margin-top:var(--s4)"><a href="materialy/index.html" class="tlink">Все материалы и фурнитура →</a></div>
+  </div>
+</section>
+
+<!-- ═══ 08. 3D-ВИЗУАЛИЗАЦИЯ ═══ -->
+<section class="sec bone">
+  <div class="wrap">
+    <div class="g2" style="align-items:center;gap:var(--s5)">
+      <div class="rv">
+        <span class="eyebrow">3D-визуализация</span>
+        <h2>Вы видите мебель до того,<br>как она изготовлена</h2>
+        <p class="lede" style="margin-top:var(--s3)">Перед производством собираем 3D-модель вашей мебели в вашем помещении: планировка, фасады, фурнитура, подсветка. Правки вносим до оплаты — не после установки.</p>
+        <a href="#zayavka" class="btn" style="margin-top:var(--s4)">Получить визуализацию <span class="ar">→</span></a>
+      </div>
+      <div class="rv"><div class="ph r54"><span class="tag">Рендер</span><b>Изображение: 3D-рендер кухни</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 09. ПРОЦЕСС ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">Процесс</span>
+      <h2>От идеи до готовой мебели<br>— пять шагов</h2>
+    </div>
+    <div class="step rv"><div class="n">01</div><h3>Заявка</h3><p>Присылаете размеры, план или просто фото помещения. Отвечаем в течение рабочего дня и задаём уточняющие вопросы.</p></div>
+    <div class="step rv"><div class="n">02</div><h3>Замер</h3><p>Мастер приезжает бесплатно и снимает точные размеры: стены, розетки, трубы, неровности. Замер ни к чему не обязывает.</p></div>
+    <div class="step rv"><div class="n">03</div><h3>Проект и 3D</h3><p>Согласовываем планировку, материалы и фурнитуру. Показываем 3D-визуализацию до того, как вы что-то оплатите.</p></div>
+    <div class="step rv"><div class="n">04</div><h3>Производство</h3><p>Изготавливаем на собственном производстве в Санкт-Петербурге. Срок фиксируется договором.</p></div>
+    <div class="step rv"><div class="n">05</div><h3>Доставка и монтаж</h3><p>Привозим, поднимаем, собираем, подключаем и настраиваем фасады. Мусор увозим с собой.</p></div>
+  </div>
+</section>
+
+<!-- ═══ 10. СТОИМОСТЬ ═══ -->
+<section class="sec bone">
+  <div class="wrap">
+    <div class="sechead rv">
+      <span class="eyebrow">Стоимость</span>
+      <h2>Сколько стоит мебель на заказ</h2>
+      <p class="lede">Ориентиры для типового помещения. Точная цена — после замера.</p>
+    </div>
+    <div class="pr rv"><div><h3>Кухни</h3><div class="sub">МДФ в плёнке, акриле, пластике и ЛДСП</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Гардеробные</h3><div class="sub">Наполнение под ваш гардероб</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Шкафы и шкафы-купе</h3><div class="sub">В нишу, до потолка, с подсветкой</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Прихожие</h3><div class="sub">Хранение в узком коридоре</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Гостиные</h3><div class="sub">ТВ-зоны, стеллажи, системы хранения</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Диваны</h3><div class="sub">Прямые, угловые, модульные</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Кровати</h3><div class="sub">С мягким изголовьем, подъёмным механизмом</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Мебель-трансформер</h3><div class="sub">Шкаф-кровать, стол-трансформер</div></div><div class="val">от 000 000 ₽</div></div>
+    <div class="pr rv"><div><h3>Мебель для бизнеса</h3><div class="sub">Офисы, салоны, кафе</div></div><div class="val">по проекту</div></div>
+    <div class="prnote rv">
+      <div>
+        <h3>Не знаете, какой вариант подойдёт?</h3>
+        <p style="margin-top:var(--s2)">Пришлите фото помещения или проект — рассчитаем стоимость бесплатно и предложим решение под ваш бюджет.</p>
+      </div>
+      <a href="#zayavka" class="btn">Получить расчёт <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11. ОТЗЫВЫ ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Что говорят клиенты</h2>
+    </div>
+    <div class="g3">
+      <div class="rev rv"><div><span class="qm">"</span><p>Текст отзыва — плейсхолдер. Нужны 3–6 реальных отзывов.</p></div><div class="who">Имя · Район · Что заказывали</div></div>
+      <div class="rev rv" style="transition-delay:70ms"><div><span class="qm">"</span><p>Текст отзыва — плейсхолдер. Лучше с указанием проекта и срока.</p></div><div class="who">Имя · Район · Что заказывали</div></div>
+      <div class="rev rv" style="transition-delay:140ms"><div><span class="qm">"</span><p>Текст отзыва — плейсхолдер. Хорошо, если упоминает замер, 3D или монтаж.</p></div><div class="who">Имя · Район · Что заказывали</div></div>
+    </div>
+    <div class="badge rv"><b>Я</b> «Хорошее место 2026» по версии Яндекса — оценка и отзывы на Яндекс.Картах</div>
+  </div>
+</section>
+
+<!-- ═══ ФОРМА ЗАЯВКИ ═══ -->
+<section class="sec dark" id="zayavka">
+  <div class="wrap">
+    <div class="formwrap">
+      <div>
+        <h2>Рассчитаем стоимость <em>вашей</em> мебели</h2>
+        <p class="lede" style="margin-top:var(--s2)">Три поля — этого достаточно, чтобы начать. Остальное уточним при разговоре.</p>
+        <ul class="fside" style="margin-top:var(--s4)">
+          <li><b>01</b><span>Отвечаем в течение рабочего дня</span></li>
+          <li><b>02</b><span>Замер бесплатный и ни к чему не обязывает</span></li>
+          <li><b>03</b><span>3D-визуализацию показываем до оплаты</span></li>
+        </ul>
+      </div>
+      <div class="fcard">
+        <form class="lead-form" action="#" method="post">
+          <div class="field">
+            <label>Что хотите изготовить?</label>
+            <div class="chips">
+              <button type="button" class="chip on">Кухня</button>
+              <button type="button" class="chip">Шкаф</button>
+              <button type="button" class="chip">Гардеробная</button>
+              <button type="button" class="chip">Прихожая</button>
+              <button type="button" class="chip">Гостиная</button>
+              <button type="button" class="chip">Другое</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Фото или план помещения</label>
+            <div class="drop">
+              <b>Прикрепить файл</b>
+              Фото, план, чертёж или скриншот — что есть. Не обязательно.
+              <input type="file" name="photo" accept="image/*,.pdf,.dwg">
+            </div>
+          </div>
+          <div class="field">
+            <label>Ваш телефон</label>
+            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="btn wide">Получить расчёт <span class="ar">→</span></button>
+          <p class="consent">Нажимая кнопку, вы соглашаетесь с <a href="politika/index.html">политикой обработки персональных данных</a>. Перезвоним или напишем в мессенджер — как вам удобнее.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec">
+  <div class="wrap narrow">
+    <div class="sechead rv">
+      <h2>Частые вопросы</h2>
+    </div>
+    <details class="q rv" open>
+      <summary>Сколько стоит мебель на заказ?</summary>
+      <p>Стоимость зависит от размеров, материалов и фурнитуры. Точную цену называем после замера, а сориентировать по порядку суммы можем в тот же день — по фото или плану помещения.</p>
+    </details>
+    <details class="q rv">
+      <summary>Сколько занимает изготовление?</summary>
+      <p>Ориентировочный срок — 00–00 рабочих дней с момента согласования проекта. Точный срок фиксируется в договоре.</p>
+    </details>
+    <details class="q rv">
+      <summary>Замер действительно бесплатный?</summary>
+      <p>Да. Выезд мастера и замер бесплатны и ни к чему не обязывают — вы можете отказаться после расчёта.</p>
+    </details>
+    <details class="q rv">
+      <summary>Можно заказать по своему дизайн-проекту?</summary>
+      <p>Да. Работаем по чертежам дизайнера, при необходимости адаптируем проект под производство и реальные размеры помещения.</p>
+    </details>
+    <details class="q rv">
+      <summary>Какие материалы вы используете?</summary>
+      <p>МДФ в плёнке, акриле и пластике, ЛДСП, акриловый камень. Работаем только с проверенными поставщиками.</p>
+    </details>
+    <details class="q rv">
+      <summary>Что с гарантией?</summary>
+      <p>Гарантия оформляется договором и распространяется на изготовление, фурнитуру и монтаж.</p>
+    </details>
+    <div style="margin-top:var(--s4)"><a href="faq/index.html" class="tlink">Все вопросы →</a></div>
+  </div>
+</section>
+
+<!-- ═══ SEO-БЛОК ═══ -->
+<section class="sec bone">
+  <div class="wrap seo">
+    <h2>Мебель на заказ в Санкт-Петербурге</h2>
+    <p>Компания MEBELCOM проектирует и производит мебель по индивидуальным размерам в Санкт-Петербурге и Ленинградской области. Мы изготавливаем кухни, шкафы и шкафы-купе, гардеробные, прихожие, гостиные, а также комплексную мебель для квартир, домов и коммерческих помещений.</p>
+    <p>Работа ведётся по полному циклу: бесплатный выезд на замер, разработка проекта и 3D-визуализации, изготовление на собственном производстве, доставка, подъём, сборка и монтаж. Вся мебель изготавливается по договору, в согласованные сроки и с официальной гарантией.</p>
+    <p>Мы используем МДФ в плёнке, акриле и пластике, ЛДСП и акриловый камень, работаем только с проверенными поставщиками материалов и фурнитуры. Подобрать решение можно под любой бюджет — от простых корпусных конструкций до сложных проектов с нестандартной геометрией.</p>
+    <p>Чтобы узнать стоимость, пришлите размеры, план помещения или фотографию — расчёт бесплатный. Посмотреть выполненные работы можно в разделе <a href="portfolio/index.html">портфолио</a>, а варианты отделки — в разделе <a href="materialy/index.html">материалы</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ ФУТЕР ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="logo" style="margin-bottom:var(--s3)">MEBELCOM<em>.</em><small>Мебель на заказ · Санкт-Петербург</small></div>
+        <p style="font-size:15px;color:rgba(239,235,226,.7);max-width:32ch;line-height:1.6">Проектируем и производим мебель по индивидуальным размерам. Собственное производство в Санкт-Петербурге.</p>
+        <a href="#zayavka" class="btn" style="margin-top:var(--s3)">Рассчитать стоимость <span class="ar">→</span></a>
+      </div>
+      <div>
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="kuhni/index.html">Кухни</a></li>
+          <li><a href="garderobnye/index.html">Гардеробные</a></li>
+          <li><a href="shkafy/index.html">Шкафы</a></li>
+          <li><a href="prihozhie/index.html">Прихожие</a></li>
+          <li><a href="gostinye/index.html">Гостиные</a></li>
+          <li><a href="divany/index.html">Диваны</a></li>
+          <li><a href="krovati/index.html">Кровати</a></li>
+          <li><a href="transformery/index.html">Трансформеры</a></li>
+          <li><a href="biznes/index.html">Мебель для бизнеса</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="portfolio/index.html">Портфолио</a></li>
+          <li><a href="proizvodstvo/index.html">Производство</a></li>
+          <li><a href="materialy/index.html">Материалы</a></li>
+          <li><a href="kak-rabotaem/index.html">Как работаем</a></li>
+          <li><a href="dizain-proekt/index.html">Дизайн-проект</a></li>
+          <li><a href="o-kompanii/index.html">О компании</a></li>
+          <li><a href="sotrudnichestvo/index.html">Сотрудничество</a></li>
+          <li><a href="faq/index.html">Частые вопросы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79218850588">+7 (921) 88-505-88</a> — СПб и ЛО</li>
+          <li><a href="tel:+79363036665">+7 (936) 303-66-65</a> — Москва</li>
+          <li><a href="mailto:info@mebelcomspb.ru">info@mebelcomspb.ru</a></li>
+          <li>Офис: Придорожная аллея 8, БЦ «Реформа»</li>
+          <li>Производство: 2-я линия 10, Ново-Ковалёво</li>
+          <li>Пн–пт, 9:00–19:00</li>
+        </ul>
+        <ul style="margin-top:var(--s2)">
+          <li>
+            <a href="https://t.me/mebelcomspb" target="_blank" rel="noopener">Telegram</a> ·
+            <a href="https://vk.com/mebelkyxnu" target="_blank" rel="noopener">ВКонтакте</a> ·
+            <a href="https://wa.me/79218850588" target="_blank" rel="noopener">WhatsApp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="freq">
+      ИП Лебедев Виктор Алексеевич · ОГРН 318784700092626 · ИНН 781417544654 · Информация на сайте не является публичной офертой · <a href="politika/index.html">Политика конфиденциальности</a> · © 2026 MEBELCOM
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
